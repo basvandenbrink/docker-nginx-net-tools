@@ -1,11 +1,10 @@
-FROM fedora:27
-RUN dnf -y update && dnf clean all
-RUN dnf install nginx net-tools wget iproute iperf3 traceroute iputils wget bind-utils -y && dnf clean all
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-
+FROM nginx:alpine
+RUN apk add --update \
+    curl \
+    wget \
+    bind-tools \
+    net-tools \
+    nginx \
+    && rm -rf /var/cache/apk/*
 
 EXPOSE 80
-
-WORKDIR /var/lib/nginx
-
-CMD [ "/usr/sbin/nginx" ]
