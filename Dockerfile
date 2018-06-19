@@ -5,6 +5,8 @@ RUN apk add --update \
     bind-tools \
     net-tools \
     nginx \
+    netcat-openbsd \
+    busybox-extras \
     && rm -rf /var/cache/apk/*
 
 EXPOSE 80
