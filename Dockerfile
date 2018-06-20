@@ -1,12 +1,11 @@
 FROM nginx:alpine
-RUN apk add --update \
+RUN apk add --update --no-cache \
     curl \
     wget \
     bind-tools \
     net-tools \
     nginx \
     netcat-openbsd \
-    busybox-extras \
-    && rm -rf /var/cache/apk/*
+    busybox-extras
 
 EXPOSE 80
