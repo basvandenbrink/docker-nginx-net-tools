@@ -4,7 +4,6 @@ RUN apk add --update --no-cache \
     wget \
     bind-tools \
     net-tools \
-    nginx \
     netcat-openbsd \
     busybox-extras
 
