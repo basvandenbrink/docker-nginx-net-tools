@@ -1,5 +1,17 @@
 FROM fedora:29
-RUN dnf -y update && dnf install nginx net-tools wget iproute iperf3 traceroute iputils wget bind-utils telnet tcpdump -y && dnf clean all
+RUN dnf install -y \
+    nginx \
+    net-tools \
+    wget \
+    iproute \
+    iperf3 \
+    traceroute \
+    iputils \
+    wget \
+    bind-utils \
+    telnet \
+    tcpdump \
+    && dnf clean all
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 
