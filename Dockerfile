@@ -5,6 +5,9 @@ RUN apk add --update --no-cache \
     bind-tools \
     net-tools \
     netcat-openbsd \
-    busybox-extras
+    busybox-extras \
+    iperf3 \
+    tcpdump
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 EXPOSE 80
