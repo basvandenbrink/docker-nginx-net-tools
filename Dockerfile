@@ -8,6 +8,5 @@ RUN apk add --update --no-cache \
     busybox-extras \
     iperf3 \
     tcpdump
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 EXPOSE 80
