@@ -4,6 +4,7 @@ RUN apk add --update --no-cache \
     wget \
     bind-tools \
     net-tools \
+    iproute2 \
     netcat-openbsd \
     busybox-extras \
     iperf3 \
